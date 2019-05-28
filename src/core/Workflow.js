@@ -1,7 +1,18 @@
 import { connect } from 'react-redux'
-import { merge, pickBy } from 'lodash'
-let tasks = {}
-let reducers = {}
+import { mergeWith, pickBy } from "lodash";
+
+let tasks = {};
+let reducers = {};
+
+export function mergeArraysSpecial(object, source) {
+  return mergeWith(object, source, (value, srcValue) => {
+    if (Array.isArray(value)) {
+      return srcValue;
+    }
+  });
+}
+
+let merge = mergeArraysSpecial;
 
 /**
  *

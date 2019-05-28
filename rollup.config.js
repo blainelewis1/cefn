@@ -53,7 +53,8 @@ export default {
           'flatten',
           'flatMap',
           'zip',
-          'max'
+          'max',
+          'mergeWith'
         ],
 
         'node_modules/react-dom/index.js': ['unstable_batchedUpdates'],

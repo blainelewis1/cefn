@@ -5,7 +5,6 @@ import propTypes from 'prop-types'
 
 export const NicePaper = styled(Paper)`
   max-width: 800px;
-  width: 100%;
   margin: 20px;
   padding: 20px;
 `
